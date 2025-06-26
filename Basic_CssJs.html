@@ -1,0 +1,41 @@
+<style>
+    button
+    {
+        background-color:greenyellow;
+    }
+    .first,.second{
+        color: darkorchid;
+        font-weight: bolder;
+        font-family: monospace;
+    }
+
+    h1[onclick]{
+        color: hotpink;
+    }
+</style>
+
+<html>
+    <body>
+        <h1 class="first">Click the button to change the color</h1>
+        <button id="one" onclick="color()">change color</button>
+
+        <br><br>
+        <h1 class="second">Click the Number to delete</h1>
+        <h1 onclick="de(event)">ONE</h1>
+        <h1 onclick="de(event)">TWO</h1>
+        <h1 onclick="de(event)">THREE</h1>
+    </body>
+</html>
+
+<script>
+    var one =document.getElementById("one")
+    function color()
+    {      
+        one.style.backgroundColor="red";
+    }
+
+    function de(event)
+    {
+        event.target.remove()
+    }
+</script>
